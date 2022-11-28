@@ -1,7 +1,6 @@
-<h1 align="center">Linux-cheat-sheet</h1>
+<h1 align="center">Linux-Command-Sheet</h1>
  
 
-Click :star:if you like the project. Pull Request are highly appreciated.
 
                      
 
@@ -9,21 +8,17 @@ Click :star:if you like the project. Pull Request are highly appreciated.
 
 1. **who** It is used to get information about currently logged in user on to system. If you don't provide any option or arguments, the command displays the following information for each logged-in user.
 
-    1. Login name of the user
-    2. User terminal
-    3. Date & Time of login
-    4. Remote host name of the user
 
    ```bash
    $ who
-   sudheer :0 2019-08-04 01:21 (:0)
+   suresh :0 2022-11-27 01:21 (:0)
    ```
 
 2. **whoami:** It display the system’s username
 
    ```bash
    $ whoami
-   sudheer
+   suresh
    ```
 
 3. **id:** It display the user identification(the real and effective user and group IDs) information
@@ -39,89 +34,21 @@ Click :star:if you like the project. Pull Request are highly appreciated.
    sj: sj, adm, cdrom, sudo, dip, plugdev, lpadmin, lxd, sambashare
    ```
 
-5. **finger:**  Used to check the information of any currently logged in users. i.e, It displays users login time, tty (name), idle time, home directory, shell name etc.
-
-   ```bash
-   $ finger
-   Login     Name       Tty      Idle  Login Time   Office     Office Phone
-   sj        sj        *:0             Aug 28 01:27 (:0)
-   ```
-
-   This may not be available by default in many linux machines. In this case, you need to install it manually.
-
-   ```bash
-   $ sudo apt install finger
-   ```
-6. **users:** Displays usernames of all users currently logged on the system.
+5. **users:** Displays usernames of all users currently logged on the system.
 
    ```bash
    $ users
-   sj
+   suresh
    ```
 
-7. **grep:** It  is a powerful pattern searching tool to find information about a specific user from the system accounts file: /etc/passwd.
 
-    ```bash
-    $ grep -i sj /etc/passwd
-    sj:x:1000:1000:sj,,,:/home/sj:/bin/bash
-    ```
-
-8. **W Command:** It(W) is a command-line utility that displays information about currently logged in users and what each user is doing.
-
-    ```bash
-    w [OPTIONS] [USER]
-
-    Example:
-    w
-     18:45:04 up  2:09,  1 user,  load average: 0.09, 0.07, 0.02
-    USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
-    sj       :0       :0               01:27   ?xdm?   1:14   0.01s /usr/lib/gdm3/g
-    ```
-
-9. **last or lastb:** Displays a list of last logged in users on the system. You can pass user names to display their login and hostname details.
-
-    ```bash
-    last [options] [username...] [tty...]
-
-    Example:
-
-    last
-    sj       :0           :0               Fri Aug 28 01:27    gone - no logout
-    reboot   system boot  5.4.0-29-generic Fri Aug 28 01:27   still running
-    sj       :0           :0               Wed Jul 29 11:46 - crash (29+13:40)
-    reboot   system boot  5.4.0-29-generic Wed Jul 29 11:45   still running
-    sj       :0           :0               Thu May 14 21:04 - crash (75+14:41)
-    reboot   system boot  5.4.0-29-generic Thu May 14 21:03   still running
-
-    wtmp begins Thu May 14 21:03:56 2020
-    ```
-
-10. **lastlog:** The `lastlog` command is used to find the details of a recent login of all users or of a given user.
-
-    ```cmd
-    $ lastlog
-
-    Username         Port     From             Latest
-    root                                       **Never logged in**
-    daemon                                     **Never logged in**
-    bin                                        **Never logged in**
-    sys                                        **Never logged in**
-    sync                                       **Never logged in**
-    games                                      **Never logged in**
-    man                                        **Never logged in**
-    lp                                         **Never logged in**
-    mail                                       **Never logged in**
-    news                                       **Never logged in**
-    ```
-
-   **[⬆ Back to Top](#table-of-contents)**
 
 ### File and directory commands
 
-1. **pwd** The pwd(Present Working Directory) command is used to print the name of the present/current working directory starting from the root.
+1. **pwd**: The pwd(Present Working Directory) command is used to print the name of the present/current working directory starting from the root.
    ```bash
    $ pwd
-   /home/sj/Desktop/Linux
+   /home/suresh/Desktop/Linux
    ```
 
 2. **ls**: The `ls` command is used to list files or directories. It also accepts some flags or options that changes how files or directories are listed in your terminal.
@@ -142,7 +69,7 @@ Click :star:if you like the project. Pull Request are highly appreciated.
 
      //Home directory
      $ ls ~
-     Desktop    Downloads  Pictures  Sudheer    test   test.txt
+     Desktop    Downloads  Pictures  Suresh    test   test.txt
      Documents  Music      Public    Templates  test1  Videos
     ```
 
@@ -163,9 +90,9 @@ Click :star:if you like the project. Pull Request are highly appreciated.
 3. **mkdir** The mkdir(make directory) command allows users to create directories or folders.
 
    ```bash
-   $ mkdir ubuntu
+   $ mkdir Suresh
    $ ls
-   ubuntu
+   Suresh
    ```
 
    The option '-p' is used to create multiple directories or parent directories at once.
@@ -268,7 +195,6 @@ Click :star:if you like the project. Pull Request are highly appreciated.
        cat file_name1.txt | less
        ```
 
-**[⬆ Back to Top](#table-of-contents)**
 
 ### File permissions
 Since Linux is a multi-user operating system, it is necessary to provide security to prevent people from accessing each other’s confidential files.
@@ -299,10 +225,7 @@ Each file or directory has following permissions for the above 3 types of owners
 
          \- = no permission
 
-    The above authorization levels represented in a diagram
-
-<img src="https://github.com/sudheerj/Linux-cheat-sheet/blob/master/images/permissions.png" width="600" height="400">
-
+   
 There is a need to restrict own file/directory access to others.
 
 **Change access:**
@@ -382,7 +305,6 @@ Example:
 sudo chgrp Administrator test.txt
 ```
 
-**[⬆ Back to Top](#table-of-contents)**
 
 ### Networking
 
@@ -464,7 +386,6 @@ make
 make install
 ```
 
-**[⬆ Back to Top](#table-of-contents)**
 
 ### Disk usage
 
@@ -516,7 +437,6 @@ du -ah --exclude="*.txt" /home/
 du  --help
 ```
 
-**[⬆ Back to Top](#table-of-contents)**
 
 ### System and Hardware information
 
@@ -550,7 +470,6 @@ $ uname -m
 $ uname -o
 ```
 
-**[⬆ Back to Top](#table-of-contents)**
 
 ### Search Files
 
@@ -564,8 +483,8 @@ grep -r // Recursive
 grep -v // Inverted search
 
 Example:
-grep "^hello" test.txt // Hello John
-grep -i "hELLo" text.txt // Hello John
+grep "^hello" test.txt // Hello Suresh
+grep -i "hELLo" text.txt // Hello Suresh
 ```
 
 2. **Find files and directories:**
@@ -653,7 +572,6 @@ Example:
 locate "*.txt" -n 10 // 10 file search results ending with .txt extension
 ```
 
-**[⬆ Back to Top](#table-of-contents)**
 
 ### SSH
 
@@ -986,4 +904,3 @@ O    # open a line above the current cursor position
     :q!	    # Quit and throw away for any changes
     ```
 
-**[⬆ Back to Top](#table-of-contents)**
